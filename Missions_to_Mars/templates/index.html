@@ -5,34 +5,92 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Mars</title>
+  <meta name="description" content="Web Scraping Homework  - Mission to Mars">
+  <meta name="author" content="LUIS SOLORZANO, Georgia Tech Data Science and Analytics Boot Camp">
+    <!--<link rel="stylesheet" href="Resources/css/bootstrap.css">-->
+    <link rel="stylesheet" href="Resources/css/bootstrap1.min.css">
+<link rel="stylesheet" href="Resources/css/style.css">
+  <title>Mission to Mars</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 
 <body>
-  <div clas="container">
+  <div class="container-fluid">
     <div class="jumbotron text-center">
-      <table>
-        <thead>Mars</thead>
-        <tbody>
-          <tr><td>{{mars_scrap.news_title}}</td></tr>
-          <tr><td>{{ mars_scrap.news_p }}</td></tr>
-        </tbody>
-      </table>
-      <h1>marte</h1>
-      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Mars Reports</a></p>
-    </div>
-      
-    <!-- surf data -->
-    <div class="row">
-      <div class="col-md-8 col-md-offset-2">
-        <img src= {{ mars_scrap.news_p }} width: 50% />
-        <h3>Santa Barbara Surf Report</h3>
-        <p></p>
-      </div>
+      <h2 colspan="2">MARS</h2>
+      <p>Web Scraping Homework  - Mission to Mars.</p>
+      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Get Data!</a></p>
     </div>
   </div>
 
-</body>
-</html>
+  <div class='container'>
+    <div class="jumbotron">
+      <div class="row" >
+        <div class="col-md-12">
+          <div class="col-sm-12 col-md-12" >
+            <div class="table-responsive1">          
+              <table class="table">
+                <thead>
+                    <th>
+                    <h1>Mars</h1>
+                    </th>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                    <h2>{{mars.news_title}}</h2><br>
+                    <h3>{{ mars.news_p }}</h3><br>
+                    </td>
+                    <td width="30%" rowspan="2">{{mars.marts_facts | safe}}</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <img src={{mars.featured_image_url}} width="100%">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colspan="2">
+                      <div class="row">
+                        <div class="col-xs-12 col-sm-3 col-md-6">
+                          <p><h3>Hemispheres of Mars</h3></p>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-xs-12 col-sm-3 col-md-6">
+                          <h4>{{title}}</h4>{% for title, url in mars.hemisphere[0].items() %}
+                          <img class="img1" src="{{url}}" width="100%">
+                          {% endfor %}
+                        </div>
+                        
+                        <div class="col-xs-12 col-sm-3 col-md-6">
+                          <h4>{{title}}</h4>{% for title, url in mars.hemisphere[1].items() %}
+                          <img class="img1" src="{{url}}" width="100%">
+                          {% endfor %}
+                        </div>
+                      </div> 
+                      <div class="row">
+                        <div class="col-xs-12 col-sm-3 col-md-6">
+                          <h4>{{title}}</h4>{% for title, url in mars.hemisphere[2].items() %}
+                          <img class="img1" src="{{url}}" width="100%">
+                          {% endfor %}
+                        </div>
+                        <div class="col-xs-12 col-sm-3 col-md-6">
+                          <h4>{{title}}</h4>{% for title, url in mars.hemisphere[3].items() %}
+                          <img class="img1" src="{{url}}" width="100%">
+                          {% endfor %}
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
 
+                </tbody>  
+              </table>
+            </div> 
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>  
+</body>
+
+</html>

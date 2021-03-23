@@ -1,0 +1,57 @@
+.box {
+  min-height: 50px;
+  padding: 0px;
+  margin: 0px;
+  font-weight: 800;
+  color: #fff;
+}
+
+.skyblue {
+  background: deepskyblue;
+}
+
+.purple {
+  background: rebeccapurple;
+}
+
+.red {
+  background: indianred;
+}
+
+.visualization {
+background: #179b6f;
+}
+
+.summary {
+background: #454d54;
+}
+
+.temp {
+background: #005580;
+}
+.humi {
+background: #5c6670;
+}
+.wind {
+background: #0099e6;
+}
+.clou {
+background: #3973ac;
+}
+
+.img1 {
+  border: 1px solid #c1dd43;
+  border-radius: 6px;
+  align-items: center;
+  }
+
+.hr1 {
+    height:2px;
+    border-width:0;
+    color:gray;
+    background-color:gray
+    }
+.thead1 {
+      background-color:rgb(72, 79, 114)
+      }
+
