@@ -31,23 +31,21 @@
             <div class="table-responsive1">          
               <table class="table">
                 <thead>
-                    <th>
-                    <h2><b>Mars</b></h2>
+                    <th><td>
+                    <h2><b>Latest Mars News </b></h2>
+                    <h3><b>{{mars.news_title}}</b></h3>
+                    <h3>{{ mars.news_p }}</h3>
+                    </td>
                     </th>
                 </thead>
                 <tbody>
                   <tr>
-                    <td colspan="2">
-                    <h2>{{mars.news_title}}</h2><br>
-                    <h3>{{ mars.news_p }}</h3>
-                    </td>
-                  </tr>
-                  <tr>
                     <td width="100" colspan="2">
                       <div class="col-xs-12 col-sm-8 col-md-7">
+                        Feature Mars Images
                         <img src={{mars.featured_image_url}} width="100%">
                       </div>
-                      <div class="col-xs-12 col-sm-4 col-md-5"> <br>
+                      <div class="col-xs-12 col-sm-4 col-md-5"> Mars facts<br>
                         {{mars.marts_facts | safe}}
                       </div>
                     </td>
