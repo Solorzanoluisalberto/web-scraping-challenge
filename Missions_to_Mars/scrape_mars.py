@@ -66,7 +66,7 @@ def Mars_Facts():
     marts = tables[0]
     marts_facts = marts.rename(columns={0: "Facts", 1: "Value"})
     # marts_facts.to_html('Mars_Facts.html', index=False, border=1)
-    marts_fact = (marts_facts.to_html(index=False, border=1)).replace('\n', '')
+    marts_fact = (marts_facts.to_html(index=False, border="1", classes="table")).replace('\n', '')
     #print(marts_fact);
     mars_scrap['marts_facts'] = marts_fact
     browser.quit()

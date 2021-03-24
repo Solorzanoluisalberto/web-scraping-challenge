@@ -32,7 +32,7 @@
               <table class="table">
                 <thead>
                     <th>
-                    <h1>Mars</h1>
+                    <h2><b>Mars</b></h2>
                     </th>
                 </thead>
                 <tbody>
@@ -43,18 +43,21 @@
                     </td>
                   </tr>
                   <tr>
-                    <td width="70">
-                      <img src={{mars.featured_image_url}} width="100%">
-                    </td>
-                    <td width="30%">
-                      {{mars.marts_facts | safe}}
+                    <td width="100" colspan="2">
+                      <div class="col-xs-12 col-sm-8 col-md-7">
+                        <img src={{mars.featured_image_url}} width="100%">
+                      </div>
+                      <div class="col-xs-12 col-sm-4 col-md-5"> <br>
+                        {{mars.marts_facts | safe}}
+                      </div>
                     </td>
                   </tr>
+                  <tr><td colspan="2"><hr style="height:2px;border-width:0;color:rgb(35, 11, 63);background-color:rgb(43, 15, 70)"></td></tr>
                   <tr>
                     <td colspan="2">
                       <div class="row">
                         <div class="col-xs-12 col-sm-3 col-md-6">
-                          <p><h3>Hemispheres of Mars</h3></p>
+                          <p><h3><b>Hemispheres of Mars</b></h3></p>
                         </div>
                       </div>
                       <div class="row">
